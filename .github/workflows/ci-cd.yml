@@ -1,5 +1,4 @@
-~yaml
-name: CI/CD Pipeline with SAST
+~yaml name: CI/CD Pipeline with SAST
 # Запускаем пайплайн при каждом пуше в ветки main или master
 # и при каждом пул-реквесте в них.
 on:
