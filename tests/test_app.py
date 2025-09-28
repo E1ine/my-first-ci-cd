@@ -1,9 +1,9 @@
 import sys
 import os
-import pytest
 from app import app
 
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))  
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))  # если реально нужен
+
 
 def test_hello_world():
     with app.test_client() as client:
