@@ -2,7 +2,13 @@ import sys
 import os
 from app import app
 
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))  # если реально нужен
+sys.path.append(
+    os.path.dirname(
+        os.path.dirname(
+            os.path.abspath(__file__)
+            )
+        )
+    )  
 
 
 def test_hello_world():
