@@ -8,7 +8,7 @@ sys.path.append(
             os.path.abspath(__file__)
             )
         )
-    )  
+    )
 
 
 def test_hello_world():
