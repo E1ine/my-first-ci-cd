@@ -72,4 +72,4 @@ jobs:
       # Шаг 6: Запускаем наши unit-тесты
       - name: Run Tests with pytest
         run: |
-          python -m pytest my-first-ci-cd/tests/ -v
+          python -m pytest app/tests/ -v
