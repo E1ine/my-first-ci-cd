@@ -35,7 +35,7 @@ jobs:
       - name: Run Bandit SAST Scan
         run: |
           pip install bandit
-          bandit -r . --severity-level high --confidence-level high -f json -o bandit_results.json || true
+          bandit -r . -f json -o bandit_results.json || true
           # Опции:
           # -r . - рекурсивно сканировать текущую директорию
           # --severity-level high - показывать только уязвимости уровня HIGH
