@@ -32,7 +32,7 @@ jobs:
       # Шаг 4: Запускаем Bandit и сохраняем результаты
       - name: Run Bandit SAST Scan
         run: |
-          bandit -r . --severity-level high --confidence-level high -f json -o bandit_results.json || true
+          bandit -r . --severity-level high --confidence-level high -f json -o bandit_results.json 
 
       # Шаг 4.1: Загружаем Bandit результаты как артефакт
       - name: Upload Bandit Report artifact
