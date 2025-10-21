@@ -32,7 +32,7 @@ jobs:
       # Шаг 4: Запускаем Bandit и сохраняем результаты
       - name: Run Bandit SAST Scan
         run: |
-          bandit -r . --severity-level high --confidence-level and high -f json -o bandit_results.json 
+          bandit -r . --severity-level high -f json -o bandit_results.json 
 
       # Шаг 4.1: Загружаем Bandit результаты как артефакт
       - name: Upload Bandit Report artifact
@@ -46,7 +46,7 @@ jobs:
         id: bandit-check
         run: |
           if [ -f bandit_results.json ]; then
-            if jq -e '.results[] | select(.issue_confidence=="HIGH" and .issue_severity=="HIGH")' bandit_results.json; then
+            if jq -e '.results[] | select(.issue_severity=="HIGH")' bandit_results.json; then
               echo "Bandit found critical vulnerabilities! Failing the pipeline."
               exit 1
             else
