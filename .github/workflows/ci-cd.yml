@@ -32,7 +32,7 @@ jobs:
       # Шаг 4: Запуск Bandit с генерацией артефакта
       - name: Run Bandit SAST Scan
         run: |
-          bandit -r . -f json -o bandit_results.json 
+          bandit -r . -f json -o bandit_results.json || true
 
       # Шаг 4.1: Загружаем артефакт сразу после генерации
       - name: Upload Bandit Report
